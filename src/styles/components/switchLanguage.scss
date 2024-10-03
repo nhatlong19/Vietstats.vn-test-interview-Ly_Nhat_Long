@@ -1,0 +1,21 @@
+.switchLanguage {
+  .ant-dropdown-trigger {
+    @apply flex gap-[6px] text-[16px] font-bold items-center cursor-pointer;
+  }
+}
+
+.customDropdown {
+  ul {
+    padding: 7px !important;
+    width: 113px !important;
+    li {
+      font-size: 16px !important;
+      font-weight: 400 !important;
+      border-radius: 8px !important;
+      &:hover {
+        background-color: #dfa128 !important;
+        color: #fff !important;
+      }
+    }
+  }
+}

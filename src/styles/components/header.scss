@@ -1,0 +1,25 @@
+.notification {
+  @apply relative w-[24px] cursor-pointer;
+  img {
+    @apply w-[24px] h-[24px] object-contain;
+  }
+  .notiNum {
+    @apply absolute bg-[#E43434] w-[18px] h-[18px] rounded-[50%] flex justify-center items-center text-white text-[14px] top-[-7px] right-[-7px];
+    line-height: 10px;
+  }
+}
+.header {
+  @apply h-[80px] flex justify-between items-center px-[40px] bg-[#fff6ea];
+  border-bottom: 4px solid #dfa128;
+  .right {
+    @apply flex items-center gap-[16px];
+  }
+
+  .menu-icon {
+    cursor: pointer;
+    @apply w-[24px] h-[24px];
+    img {
+      @apply w-[100%] h-[100%] object-contain;
+    }
+  }
+}

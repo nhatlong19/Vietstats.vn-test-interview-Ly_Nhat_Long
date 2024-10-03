@@ -1,0 +1,41 @@
+.sidebar {
+  @apply w-[249px] bg-white px-[14px] py-[20px] h-[100vh] z-[2];
+  // box-shadow: 4px 0px 4px 0px #00000040;
+  transition: 0.3s;
+  &.collapsed {
+    @apply w-[86px];
+    transition: 0.3s;
+    .sidebarItem {
+      p {
+        transition: 0.2s;
+        opacity: 0;
+        z-index: -9999;
+      }
+    }
+  }
+  .sidebarItem {
+    @apply flex gap-[10px] items-center h-[48px] px-[17px] rounded-[4px] cursor-pointer;
+    transition: 0.3s;
+    white-space: nowrap;
+    img {
+      @apply w-[24px] h-[24px] object-contain;
+    }
+    p {
+      @apply text-[#5b6067] text-[16px] font-[400] leading-[24px];
+      transition: 0.2s;
+    }
+    &.inactive {
+      opacity: 0.7;
+      &:hover {
+        opacity: 1;
+        transition: 0.3s;
+      }
+    }
+    &.active {
+      @apply bg-[#DFA128];
+      p {
+        @apply text-white;
+      }
+    }
+  }
+}

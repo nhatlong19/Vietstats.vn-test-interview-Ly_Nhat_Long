@@ -1,0 +1,273 @@
+.dashboard {
+  .top {
+    @apply flex gap-[24px];
+    .left {
+      @apply flex-1;
+      .cards {
+        @apply flex gap-[24px] pt-[75px] flex-wrap;
+      }
+      .charts {
+        @apply mt-[24px] flex gap-[24px];
+        .chart-l {
+          @apply w-[60%];
+        }
+        .chart-r {
+          @apply flex-1;
+        }
+      }
+    }
+    .right {
+      .timetable {
+        margin-top: 24px;
+      }
+    }
+  }
+  .bottom {
+    .left {
+      width: 70%;
+    }
+    .right {
+      @apply flex flex-col gap-[24px];
+    }
+  }
+}
+
+.banner {
+  background-image: url("/images/3.png");
+  width: 100%;
+  height: 117px;
+  position: relative;
+  border-radius: 8px;
+  margin-top: 22px;
+  img {
+    position: absolute;
+    bottom: -57px;
+    left: 77px;
+    width: 308px;
+    height: 205px;
+    object-fit: contain;
+  }
+  div {
+    @apply text-black font-bold text-[30px] leading-[37.5px] mb-[3px] ml-[462px] pt-[42px];
+  }
+  p {
+    @apply text-[16px] text-black font-[400] leading-[24x] ml-[462px];
+  }
+}
+
+.statisticsCard {
+  @apply w-[calc(25%-18px)] h-[158px] rounded-[16px] bg-[#ffffff] flex flex-col gap-[12px] justify-center items-center;
+  box-shadow: 0px 0px 24px 0px #00000033;
+
+  img {
+    @apply w-[50px] h-[50px] object-center;
+  }
+  .total {
+    @apply text-[30px] font-bold leading-[30px];
+    span {
+      font-size: 20px;
+    }
+  }
+  .title {
+    @apply text-[14px] font-[400] text-[#949CA9] leading-[14px];
+  }
+}
+
+.newClassesChart {
+  @apply bg-white p-[16px] pb-[40px] rounded-[16px];
+  box-shadow: 0px 0px 24px 0px #00000033;
+  .title {
+    @apply text-[#3D3D3D] text-[20px] leading-[26px] font-bold mb-[38px];
+  }
+}
+
+.RevenueChart {
+  @apply bg-white p-[16px] pb-[40px] rounded-[16px];
+  box-shadow: 0px 0px 24px 0px #00000033;
+  .title {
+    @apply text-[#3D3D3D] text-[20px] leading-[26px] font-bold mb-[38px];
+  }
+  .statistical {
+    margin-right: 10px;
+    margin-bottom: 20px;
+    .today {
+      @apply text-[#949CA9] text-[30px];
+    }
+    .revenue {
+      @apply text-[40px] text-black font-bold;
+      span {
+        font-size: 30px;
+      }
+    }
+    .tag {
+      @apply w-[44px] h-[28px] flex justify-center items-center rounded-[4px] bg-[#E7FFE9] text-[#43C378] text-[14px];
+    }
+    .yesterday {
+      @apply text-[#949CA9] text-[14px];
+    }
+  }
+}
+
+.learnAcChart {
+  @apply bg-white p-[16px] pb-[40px] rounded-[16px];
+  box-shadow: 0px 0px 24px 0px #00000033;
+  .title {
+    @apply text-[#3D3D3D] text-[20px] leading-[26px] font-bold mb-[38px];
+  }
+  .legend {
+    @apply flex justify-end pr-[250px] gap-[24px];
+    p {
+      font-size: 16px;
+      color: #3d3d3d;
+    }
+    .this {
+      @apply flex gap-[8px] items-center;
+      div {
+        width: 18px;
+        height: 18px;
+        background-color: #ff6968;
+        border-radius: 50%;
+      }
+    }
+    .pre {
+      @apply flex gap-[8px] items-center;
+      div {
+        width: 18px;
+        height: 18px;
+        background-color: #268aff;
+        border-radius: 50%;
+      }
+    }
+  }
+}
+
+.classStatCard {
+  @apply px-[31px] py-[23px] rounded-[16px] bg-[#FFFFFF];
+  box-shadow: 0px 0px 24px 0px #00000033;
+  .title {
+    @apply text-[16px] mb-[6px] text-[#3D3D3DB2];
+  }
+  .num {
+    @apply text-[24px] text-[#000] font-bold;
+  }
+}
+
+.myCalendar {
+  width: 100%;
+  .react-calendar {
+    width: 100%;
+    padding: 18px 23px;
+    border: none;
+    box-shadow: 0px 0px 24px 0px #00000033;
+    border-radius: 16px;
+    .react-calendar__navigation__label__labelText {
+      font-size: 14px;
+      font-weight: 500;
+    }
+    .react-calendar__tile--now {
+      background: #dfa128;
+      border-radius: 10px;
+    }
+    .react-calendar__tile--active.react-calendar__tile.react-calendar__month-view__days__day {
+      color: #ffffff;
+    }
+    .react-calendar__month-view__weekdays__weekday {
+      font-size: 10px;
+      color: #dfa128;
+    }
+    .react-calendar__tile.react-calendar__month-view__days__day {
+      color: #949ca9;
+      border-radius: 10px;
+    }
+    .react-calendar__tile--now.react-calendar__tile.react-calendar__month-view__days__day {
+      color: #ffffff;
+      &:hover {
+        background: #dfa128;
+        color: #ffffff;
+      }
+    }
+  }
+}
+
+.myTimetable {
+  @apply px-[31px] py-[23px] rounded-[16px] bg-[#FFFFFF] h-[480px];
+  box-shadow: 0px 0px 24px 0px #00000033;
+  .title {
+    @apply text-[20px] mb-[8px] text-[#030202b2] font-[500];
+    span {
+      font-weight: bold;
+    }
+  }
+  .ant-tabs {
+    width: 100%;
+    .ant-tabs-nav-wrap {
+      width: 100%;
+      .ant-tabs-nav-list {
+        width: 100%;
+        @apply flex justify-between;
+        .ant-tabs-tab {
+          margin: 0;
+          padding-top: 0;
+          .dayTab {
+            @apply w-[47px] h-[68px] rounded-[13px] bg-[#F9ECD4] flex flex-col gap-[10px] justify-center items-center;
+            p {
+              color: #949ca9;
+              font-size: 17px;
+              line-height: 21px;
+            }
+          }
+        }
+        .ant-tabs-tab.ant-tabs-tab-active {
+          .dayTab {
+            @apply bg-[#DFA128];
+            box-shadow: 0px 20px 55px 0px #0f123f40;
+            p {
+              color: #ffffff;
+            }
+          }
+        }
+      }
+    }
+    .ant-tabs-ink-bar {
+      background: #4b4b4b;
+    }
+  }
+}
+
+.timeTableCard {
+  @apply h-[70px] flex justify-between items-center;
+  .time {
+    @apply text-[#949CA9] text-[16px];
+  }
+  .classes {
+    @apply h-full w-[190px] flex gap-[12px] items-center bg-[#377DFF] rounded-[8px] py-[8px] px-[12px];
+    img {
+      @apply w-[33px] h-[33px] object-contain rounded-[50%];
+    }
+    .subject {
+      .subjectTitle {
+        font-size: 14px;
+        margin-bottom: 4px;
+        line-height: 17px;
+        color: white;
+        font-weight: 500;
+      }
+      .id {
+        font-size: 12px;
+        margin-bottom: 4px;
+        line-height: 15px;
+        color: white;
+        font-weight: 500;
+      }
+      .studentId {
+        font-size: 12px;
+        line-height: 15px;
+        color: white;
+        font-weight: 500;
+      }
+    }
+  }
+}
+.timeTableContent {
+  @apply flex flex-col gap-[10px];
+}
